@@ -10,7 +10,7 @@ class Movie extends React.Component {
   }
 
 componentDidMount () {
-    fetch(`http://www.omdbapi.com/?i=${this.props.match.params.id}&apikey=516b1aec`)
+    fetch(`https://www.omdbapi.com/?i=${this.props.match.params.id}&apikey=516b1aec`)
         .then(checkStatus)
         .then(json)
         .then((data) => {
@@ -66,7 +66,7 @@ render() {
                 </ul>
             </div>
             <div className="col-6">
-                <img src={Poster} className="img-fluid" />
+                <img src={Poster} className="img-fluid" alt="404" />
             </div>
         </div>
     </div>
